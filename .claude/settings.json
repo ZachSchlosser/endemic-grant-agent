@@ -1,0 +1,48 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if [[ \"$FILE_PATH\" == *\"question\"* && \"$FILE_PATH\" == *\"grant\"* ]]; then cd '/Users/home/Desktop/Endemic Grant Agent' && python3 question_accuracy_checker.py --validate '$FILE_PATH' --quiet || (echo 'QUESTION ACCURACY CHECKER: Invalid or fabricated questions detected' && exit 1); fi"
+          }
+        ]
+      },
+      {
+        "matcher": "mcp__notion__*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if [[ \"$CLAUDE_PROJECT_DIR\" == *\"Endemic Grant Agent\"* ]]; then cd '/Users/home/Desktop/Endemic Grant Agent' && echo 'GRANT VERIFIER: Checking Notion operations for grant accuracy...' && python3 -c \"print('Grant verification would run here')\"; fi"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if [[ \"$FILE_PATH\" == *\"grant\"* || \"$FILE_PATH\" == *\"proposal\"* || \"$FILE_PATH\" == *\"application\"* ]]; then cd '/Users/home/Desktop/Endemic Grant Agent' && python3 -c \"import sys; sys.path.append('.'); from proposal_validator import validate_and_fix_proposal; content=open('$FILE_PATH').read() if '$FILE_PATH' else ''; fixed, violations = validate_and_fix_proposal(content); print('PROPOSAL VALIDATOR:', violations) if violations else None\"; fi"
+          },
+          {
+            "type": "command", 
+            "command": "if [[ \"$FILE_PATH\" == *\"grant\"* || \"$FILE_PATH\" == *\"proposal\"* || \"$FILE_PATH\" == *\"application\"* ]]; then cd '/Users/home/Desktop/Endemic Grant Agent' && python3 ai_jargon_replacer.py '$FILE_PATH' --config jargon_config.json --output '$FILE_PATH.cleaned' --report --quiet 2>/dev/null && if [ -f '$FILE_PATH.cleaned' ]; then mv '$FILE_PATH.cleaned' '$FILE_PATH' && echo 'AI JARGON REPLACER: Processed for natural language patterns'; fi; fi"
+          }
+        ]
+      },
+      {
+        "matcher": "MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if [[ \"$FILE_PATH\" == *\"grant\"* || \"$FILE_PATH\" == *\"proposal\"* || \"$FILE_PATH\" == *\"application\"* ]]; then cd '/Users/home/Desktop/Endemic Grant Agent' && python3 ai_jargon_replacer.py '$FILE_PATH' --config jargon_config.json --output '$FILE_PATH.cleaned' --report --quiet 2>/dev/null && if [ -f '$FILE_PATH.cleaned' ]; then mv '$FILE_PATH.cleaned' '$FILE_PATH' && echo 'AI JARGON REPLACER: Processed for natural language patterns'; fi; fi"
+          }
+        ]
+      }
+    ]
+  }
+}

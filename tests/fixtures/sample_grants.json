@@ -1,0 +1,72 @@
+{
+  "valid_grants": [
+    {
+      "organization_name": "Gordon and Betty Moore Foundation",
+      "grant_name": "Emergent Phenomena Initiative",
+      "description": "Studying emergence across scales from quantum to cosmic. Research focuses on complex systems and emergent properties in natural phenomena.",
+      "amount": "$500,000 - $3,000,000",
+      "deadline": "2025-10-15",
+      "link": "https://www.moore.org/initiative-strategy-detail?initiativeId=emergent-phenomena",
+      "alignment_score": 9.2,
+      "notes": "Perfect match for Sacred Societies' focus on emergent complexity and systems consciousness."
+    },
+    {
+      "organization_name": "Mozilla Foundation",
+      "grant_name": "Trustworthy AI Fund", 
+      "description": "Supporting projects that ensure AI systems are transparent, accountable, and aligned with human values and consciousness",
+      "amount": "$10,000 - $100,000",
+      "deadline": "2025-04-15",
+      "link": "https://foundation.mozilla.org/en/what-we-fund/awards/trustworthy-ai/",
+      "alignment_score": 7.5,
+      "notes": "Good alignment with consciousness-AI intersection and ethical AI development."
+    }
+  ],
+  "invalid_grants": [
+    {
+      "organization_name": "Fake Foundation XYZ",
+      "grant_name": "Non-existent Program",
+      "description": "This is a made-up grant opportunity that doesn't actually exist",
+      "amount": "$1,000,000",
+      "deadline": "2025-12-31",
+      "link": "https://fakefoundation.org/fake-grant",
+      "alignment_score": 10.0,
+      "notes": "This foundation and grant do not exist."
+    }
+  ],
+  "red_flag_grants": [
+    {
+      "organization_name": "Simons Foundation",
+      "grant_name": "Mathematics and Physical Sciences - Consciousness Studies",
+      "description": "Mathematical approaches to consciousness studies and epistemological clarity using cognitive widget approach",
+      "amount": "$300,000 - $1,500,000", 
+      "deadline": "2025-12-15",
+      "link": "https://www.simonsfoundation.org/funding-opportunities/",
+      "alignment_score": 8.8,
+      "notes": "Contains red flag phrases: consciousness studies, epistemological clarity, cognitive widget approach"
+    }
+  ],
+  "sample_questions": [
+    {
+      "question_number": 1,
+      "question_text": "Describe your project in 1-2 sentences (max 280 characters)",
+      "question_type": "short_description",
+      "character_limit": 280,
+      "word_limit": null
+    },
+    {
+      "question_number": 2,
+      "question_text": "Provide a detailed project description (max 500 words)",
+      "question_type": "project_description",
+      "character_limit": null,
+      "word_limit": 500
+    },
+    {
+      "question_number": 3,
+      "question_text": "Explain how this project aligns with our foundation's mission",
+      "question_type": "alignment",
+      "character_limit": null,
+      "word_limit": 250
+    }
+  ],
+  "sample_html_content": "<html><head><title>Grant Opportunity</title></head><body><h1>Research Grant Program</h1><p>We are pleased to announce our annual research grant program supporting innovative projects in science and technology.</p><div class='deadline'>Application Deadline: December 15, 2025</div><div class='amount'>Award Amount: $50,000 - $200,000</div></body></html>"
+}

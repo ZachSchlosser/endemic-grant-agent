@@ -1,0 +1,186 @@
+{
+  "overused_phrases": {
+    "delve into": ["explore", "examine", "look at", "investigate"],
+    "furthermore": ["also", "additionally", "next"],
+    "moreover": ["also", "what's more", "in addition"],
+    "in conclusion": ["finally", "to sum up", "in summary"],
+    "groundbreaking": ["new", "novel", "first", "pioneering"],
+    "revolutionary": ["significant", "major", "transformative"],
+    "transformative": ["significant", "meaningful", "impactful"],
+    "innovative": ["new", "creative", "original"],
+    "leverage": ["use", "utilize", "apply", "employ"],
+    "seamless": ["smooth", "integrated", "unified"],
+    "paradigm": ["model", "framework", "approach"],
+    "cutting-edge": ["advanced", "latest", "modern"],
+    "state-of-the-art": ["advanced", "current", "leading"],
+    "game-changing": ["significant", "important", "major"],
+    "disruptive": ["changing", "influential", "impactful"],
+    "synergy": ["cooperation", "collaboration", "teamwork"],
+    "holistic": ["comprehensive", "complete", "integrated"],
+    "optimize": ["improve", "enhance", "refine"],
+    "streamline": ["simplify", "improve", "make efficient"],
+    "robust": ["strong", "reliable", "solid"],
+    "scalable": ["expandable", "adaptable", "flexible"],
+    "dynamic": ["changing", "active", "flexible"],
+    "comprehensive": ["complete", "thorough", "full"],
+    "multifaceted": ["complex", "varied", "diverse"],
+    "pivotal": ["crucial", "key", "essential"],
+    "unprecedented": ["new", "unique", "first"],
+    "exponential": ["rapid", "significant", "substantial"],
+    "paradigm shift": ["major change", "transformation", "shift"],
+    "game changer": ["significant factor", "key element", "major influence"],
+    "next level": ["improved", "enhanced", "advanced"],
+    "best practices": ["proven methods", "effective approaches", "good techniques"],
+    "deep dive": ["detailed look", "thorough analysis", "close examination"],
+    "at the end of the day": ["ultimately", "in the end", "finally"],
+    "think outside the box": ["be creative", "try new approaches", "innovate"],
+    "low-hanging fruit": ["easy wins", "simple solutions", "quick fixes"],
+    "move the needle": ["make progress", "create impact", "drive results"],
+    "circle back": ["return to", "revisit", "follow up on"],
+    "take it to the next level": ["improve", "enhance", "advance"],
+    "pivot": ["change direction", "shift", "adapt"],
+    "deep understanding": ["thorough knowledge", "comprehensive grasp", "clear insight"],
+    "significant impact": ["meaningful effect", "important influence", "substantial change"],
+    "key insights": ["important findings", "crucial discoveries", "valuable observations"],
+    "actionable insights": ["useful findings", "practical discoveries", "applicable results"],
+    "data-driven": ["evidence-based", "research-backed", "fact-supported"],
+    "best-in-class": ["leading", "top-quality", "excellent"],
+    "world-class": ["excellent", "superior", "outstanding"],
+    "mission-critical": ["essential", "vital", "crucial"],
+    "end-to-end": ["complete", "comprehensive", "full"],
+    "full-stack": ["complete", "comprehensive", "integrated"],
+    "turnkey": ["complete", "ready-made", "all-inclusive"],
+    "value-add": ["benefit", "advantage", "improvement"],
+    "buy-in": ["agreement", "support", "acceptance"],
+    "bandwidth": ["capacity", "time", "resources"],
+    "ballpark": ["estimate", "approximation", "rough figure"],
+    "deliverables": ["results", "outcomes", "products"],
+    "learnings": ["lessons", "insights", "discoveries"],
+    "ideate": ["brainstorm", "think", "generate ideas"]
+  },
+  "transition_patterns": [
+    "\\b(furthermore|moreover|additionally|consequently|nevertheless|nonetheless|therefore|thus|hence)\\b",
+    "\\b(in conclusion|to conclude|in summary|to summarize|in essence)\\b",
+    "\\b(on the other hand|in contrast|conversely|alternatively)\\b",
+    "\\b(for instance|for example|such as|namely|specifically)\\b"
+  ],
+  "buzzword_clusters": [
+    ["innovative", "groundbreaking", "revolutionary", "cutting-edge"],
+    ["leverage", "utilize", "optimize", "streamline"],
+    ["seamless", "integrated", "comprehensive", "holistic"],
+    ["transformative", "paradigm", "disruptive", "game-changing"],
+    ["robust", "scalable", "dynamic", "flexible"],
+    ["pivotal", "crucial", "mission-critical", "key"],
+    ["state-of-the-art", "world-class", "best-in-class", "leading"],
+    ["synergy", "collaboration", "partnership", "alignment"]
+  ],
+  "em_dash_threshold": 2,
+  "typography_rules": {
+    "em_dash_patterns": {
+      "definition_patterns": [
+        {
+          "pattern": "cognitive widgets[\"']?\\s*[—,]\\s*the unconscious mental frameworks",
+          "replacement": "cognitive widgets: the unconscious mental frameworks",
+          "description": "Definition with colon"
+        },
+        {
+          "pattern": "OntoEdit AI[\"']?\\s*[—,]\\s*the first tool that",
+          "replacement": "OntoEdit AI. The first tool that",
+          "description": "Dramatic pause with period"
+        },
+        {
+          "pattern": "metaphysical malware[\"']?\\s*[—,]\\s*hidden cognitive",
+          "replacement": "metaphysical malware: hidden cognitive",
+          "description": "Definition with colon"
+        },
+        {
+          "pattern": "truth-seeking philosophy[\"']?\\s*[—,]\\s*an AI system",
+          "replacement": "truth-seeking philosophy. An AI system",
+          "description": "Dramatic pause with period"
+        }
+      ],
+      "hyphenation_fixes": [
+        {"from": "philosophy-to, code mission", "to": "philosophy-to-code mission"},
+        {"from": "open, source", "to": "open-source"},
+        {"from": "90, day Phase", "to": "90-day Phase"},
+        {"from": "proof-of, concept", "to": "proof-of-concept"},
+        {"from": "1, line on how", "to": "1-line on how"},
+        {"from": "co — founder", "to": "co-founder"},
+        {"from": "subject — object", "to": "subject-object"}
+      ],
+      "replacement_strategies": {
+        "sentence_break": {
+          "condition": "right_part_starts_uppercase",
+          "replacement": ". ",
+          "description": "Period for sentence break"
+        },
+        "connection": {
+          "condition": "contains_connector_words",
+          "connector_words": ["and", "but", "which", "that"],
+          "replacement": ", ",
+          "description": "Comma for connection"
+        },
+        "default": {
+          "replacement": ", ",
+          "description": "Default comma"
+        }
+      },
+      "target_max_per_document": 6,
+      "max_per_section": 2
+    },
+    "dash_characters": {
+      "em_dash": "—",
+      "en_dash": "–", 
+      "hyphen": "-",
+      "minus": "−",
+      "figure_dash": "‒",
+      "quotation_dash": "―"
+    }
+  },
+  "formal_indicators": [
+    "furthermore", "moreover", "consequently", "nevertheless", "therefore",
+    "henceforth", "notwithstanding", "accordingly", "subsequently", "wherein"
+  ],
+  "casual_replacements": {
+    "furthermore": ["Also", "Plus", "And"],
+    "moreover": ["Plus", "Also", "What's more"],
+    "consequently": ["So", "This means", "As a result"],
+    "nevertheless": ["But", "Still", "Even so"],
+    "therefore": ["So", "This means", "That's why"],
+    "henceforth": ["From now on", "Going forward", "Next"],
+    "notwithstanding": ["Despite", "Even with", "Still"],
+    "accordingly": ["So", "Therefore", "This way"],
+    "subsequently": ["Then", "Next", "After that"],
+    "wherein": ["where", "in which", "that"]
+  },
+  "context_clues": {
+    "academic": ["research", "study", "analysis", "methodology", "findings", "hypothesis"],
+    "business": ["strategy", "market", "revenue", "customer", "profit", "growth"],
+    "technical": ["system", "process", "implementation", "architecture", "framework"],
+    "grant_writing": ["funding", "proposal", "initiative", "impact", "outcomes", "objectives"]
+  },
+  "sentence_length_targets": {
+    "academic": 20,
+    "business": 15,
+    "grant_writing": 18,
+    "general": 16
+  },
+  "replacement_priorities": {
+    "grant_writing": {
+      "transformative": ["meaningful", "significant", "impactful"],
+      "innovative": ["creative", "original", "new"],
+      "leverage": ["use", "apply", "employ"],
+      "groundbreaking": ["pioneering", "first", "novel"]
+    },
+    "academic": {
+      "delve into": ["examine", "investigate", "analyze"],
+      "furthermore": ["additionally", "also", "next"],
+      "in conclusion": ["in summary", "finally", "to conclude"]
+    },
+    "business": {
+      "leverage": ["utilize", "use", "employ"],
+      "synergy": ["collaboration", "teamwork", "cooperation"],
+      "optimize": ["improve", "enhance", "refine"]
+    }
+  }
+}

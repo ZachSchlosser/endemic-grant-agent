@@ -1,0 +1,15 @@
+{
+  "description": "Global Claude Code configuration for Notion MCP server",
+  "location": "~/.claude.json",
+  "notion_server": {
+    "type": "stdio",
+    "command": "npx @notionhq/notion-mcp-server",
+    "args": [],
+    "env": {}
+  },
+  "notes": [
+    "This is extracted from the global Claude configuration",
+    "The actual global config file remains at ~/.claude.json",
+    "This file is for reference only - changes here won't affect Claude"
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "red_flag_phrases": [
+    "consciousness studies",
+    "epistemological clarity", 
+    "cognitive widget approach",
+    "information integrity",
+    "mathematical and computational approach advance",
+    "paradigm-shifting breakthrough",
+    "revolutionary cognitive framework",
+    "transformative epistemological paradigm"
+  ],
+  "suspicious_patterns": [
+    {
+      "pattern": ".*consciousness.*studies.*",
+      "description": "Combines consciousness with studies - often fabricated",
+      "severity": "high"
+    },
+    {
+      "pattern": ".*epistemological.*clarity.*",
+      "description": "Academic-sounding but uncommon phrase combination",
+      "severity": "high"  
+    },
+    {
+      "pattern": ".*cognitive widget.*",
+      "description": "Project-specific terminology not used by funders",
+      "severity": "high"
+    },
+    {
+      "pattern": ".*information integrity.*initiative.*",
+      "description": "Generic phrase often used in fabricated grants",
+      "severity": "medium"
+    }
+  ],
+  "known_fabrication_indicators": [
+    "Made-up program names with years (e.g., 'Initiative 2026')",
+    "Unusually perfect alignment scores (10.0/10)",
+    "Generic descriptions with project-specific terminology",
+    "Deadlines that don't match actual foundation cycles",
+    "URLs that don't exist or point to generic pages"
+  ],
+  "validation_checks": {
+    "organization_verification": {
+      "check_official_website": true,
+      "verify_program_existence": true,
+      "cross_reference_databases": true
+    },
+    "content_analysis": {
+      "red_flag_detection": true,
+      "language_pattern_analysis": true,
+      "terminology_consistency": true
+    },
+    "metadata_validation": {
+      "url_accessibility": true,
+      "deadline_reasonableness": true,
+      "amount_format_check": true
+    }
+  },
+  "verification_sources": [
+    "Official foundation websites",
+    "GrantSpace.org",
+    "Foundation Directory Online", 
+    "Candid.org",
+    "Chronicle of Philanthropy",
+    "Inside Philanthropy"
+  ],
+  "confidence_thresholds": {
+    "high_confidence": 0.9,
+    "medium_confidence": 0.7,
+    "low_confidence": 0.5,
+    "reject_threshold": 0.3
+  }
+}

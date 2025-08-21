@@ -1,0 +1,134 @@
+{
+  "foundation_seeds": {
+    "Gordon and Betty Moore Foundation": {
+      "base_urls": ["moore.org"],
+      "funding_page": "https://www.moore.org/initiative-strategy-detail?initiativeId=emergent-phenomena",
+      "known_programs": [
+        "Emergent Phenomena Initiative",
+        "Data-Driven Discovery",
+        "Marine Microbiology Initiative"
+      ],
+      "search_keywords": ["emergence", "complex systems", "data science", "marine research"],
+      "typical_amounts": ["$500,000", "$3,000,000"],
+      "application_seasons": ["fall", "spring"]
+    },
+    "Mozilla Foundation": {
+      "base_urls": ["foundation.mozilla.org"],
+      "funding_page": "https://foundation.mozilla.org/en/what-we-fund/",
+      "known_programs": [
+        "Trustworthy AI Fund",
+        "Data Futures Lab",
+        "Mozilla Fellows Program"
+      ],
+      "search_keywords": ["AI ethics", "data governance", "internet health", "trustworthy AI"],
+      "typical_amounts": ["$10,000", "$150,000"],
+      "application_seasons": ["rolling"]
+    },
+    "John Templeton Foundation": {
+      "base_urls": ["templeton.org"],
+      "funding_page": "https://www.templeton.org/grants",
+      "known_programs": [
+        "Diverse Intelligences",
+        "Science of Virtues", 
+        "Mathematical and Physical Sciences"
+      ],
+      "search_keywords": ["consciousness", "intelligence", "virtue science", "complexity"],
+      "typical_amounts": ["$100,000", "$1,000,000"],
+      "application_seasons": ["varies"]
+    },
+    "Simons Foundation": {
+      "base_urls": ["simonsfoundation.org"],
+      "funding_page": "https://www.simonsfoundation.org/funding-opportunities/",
+      "known_programs": [
+        "Simons Collaborations in Mathematics and the Physical Sciences",
+        "Targeted Grants in MPS",
+        "Simons Fellows in Mathematics"
+      ],
+      "search_keywords": ["mathematics", "physics", "theoretical computer science", "life sciences"],
+      "typical_amounts": ["$300,000", "$2,000,000"],
+      "application_seasons": ["annual"]
+    },
+    "Chan Zuckerberg Initiative": {
+      "base_urls": ["chanzuckerberg.com"],
+      "funding_page": "https://chanzuckerberg.com/science/programs-resources/",
+      "known_programs": [
+        "Single-Cell Biology",
+        "Neurodegeneration Challenge Network",
+        "Essential Open Source Software for Science"
+      ],
+      "search_keywords": ["science technology", "open source", "single cell", "neuroscience"],
+      "typical_amounts": ["$250,000", "$2,000,000"],
+      "application_seasons": ["varies"]
+    }
+  },
+  "search_engines": {
+    "primary": "brave_search",
+    "fallback": "duckduckgo",
+    "grant_specific_queries": [
+      "site:grants.gov artificial intelligence consciousness",
+      "site:foundationcenter.org AI ethics funding 2025",
+      "\"research grant\" consciousness studies 2025 deadline",
+      "\"funding opportunity\" artificial intelligence philosophy",
+      "grant application AI consciousness interdisciplinary"
+    ]
+  },
+  "grant_aggregators": {
+    "GrantSpace": {
+      "url": "https://grantspace.org",
+      "search_endpoint": "/search",
+      "requires_auth": false
+    },
+    "Foundation Directory": {
+      "url": "https://fconline.foundationcenter.org", 
+      "requires_auth": true,
+      "note": "Requires subscription"
+    },
+    "Candid": {
+      "url": "https://candid.org/find-funding",
+      "search_endpoint": "/search",
+      "requires_auth": false
+    },
+    "Grants.gov": {
+      "url": "https://grants.gov",
+      "search_endpoint": "/web/grants/search-grants.html",
+      "api_endpoint": "https://api.grants.gov/",
+      "requires_auth": false
+    }
+  },
+  "validation_rules": {
+    "required_fields": [
+      "organization_name",
+      "grant_name", 
+      "description",
+      "amount"
+    ],
+    "optional_fields": [
+      "deadline",
+      "link",
+      "alignment_score",
+      "notes",
+      "application_requirements"
+    ],
+    "minimum_description_length": 50,
+    "maximum_description_length": 2000,
+    "red_flag_patterns": [
+      "consciousness studies",
+      "ai for science and society",
+      "information integrity initiative \\d{4}",
+      "mathematics and physical sciences - .*",
+      "generic research grant",
+      "unnamed funding opportunity",
+      "tbd grant program",
+      "placeholder grant.*"
+    ],
+    "deadline_validation": {
+      "supported_formats": [
+        "%Y-%m-%d",
+        "%Y-%m-%d %H:%M:%S", 
+        "%m/%d/%Y",
+        "%B %d, %Y"
+      ],
+      "warning_days_threshold": 7
+    }
+  }
+}
