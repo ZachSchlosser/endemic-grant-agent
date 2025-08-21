@@ -10,7 +10,7 @@ The Endemic Grant Agent is a sophisticated AI-powered system that automatically 
 
 - 🔍 **Intelligent Grant Discovery**: Dynamically searches multiple foundation sources without hardcoded lists
 - 🎯 **Smart Alignment Scoring**: Evaluates grants based on The Divinity School's unique focus areas
-- 🤖 **AI Proposal Generation**: Creates tailored responses using Claude 3.5 Sonnet with custom instructions
+- 🤖 **AI Proposal Generation**: Creates tailored responses using Claude Sonnet 4 with custom instructions
 - 📊 **Notion Integration**: Delivers organized proposal materials directly to grant writers
 - 🔄 **Fully Automated**: End-to-end processing from discovery to writer handoff
 - 🛡️ **Robust Error Handling**: Graceful handling of API limits, duplicates, and edge cases
@@ -155,14 +155,14 @@ Grants are scored 0-10 based on alignment with:
 
 ## AI Proposal Generation
 
-### Context Integration
+### Advanced Claude Sonnet 4 Integration
 
-The system uses `CLAUDE.md` instructions to generate proposals that:
+The system leverages Claude Sonnet 4's enhanced capabilities with `CLAUDE.md` instructions to generate proposals that:
 
-- Match funder-specific language and priorities
-- Incorporate The Divinity School's unique positioning
-- Balance visionary ambition with practical feasibility
-- Follow proven grant writing best practices
+- Match funder-specific language and priorities with superior contextual understanding
+- Incorporate The Divinity School's unique positioning through advanced reasoning
+- Balance visionary ambition with practical feasibility using extended context processing
+- Follow proven grant writing best practices with improved consistency and quality
 
 ### Example Output
 
